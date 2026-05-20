@@ -12,3 +12,5 @@ Based on https://github.com/thisiscam/export-findmy/
   - [ ] Inherit session from FindMy.py
   - [ ] Inherit Anisette session from FindMy.py
 - [ ] Set up CI to build for various platforms
+  - [x] Linux / MacOS
+  - [ ] Windows

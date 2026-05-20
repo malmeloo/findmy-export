@@ -43,7 +43,9 @@
     "naersk": {
       "inputs": {
         "fenix": "fenix",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1778151388,
@@ -60,22 +62,6 @@
       }
     },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1752077645,
-        "narHash": "sha256-HM791ZQtXV93xtCY+ZxG1REzhQenSQO020cu6rHtAPk=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "be9e214982e20b8310878ac2baa063a961c1bdf6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
       "locked": {
         "lastModified": 1778869304,
         "narHash": "sha256-30sZNZoA1cqF5JNO9fVX+wgiQYjB7HJqqJ4ztCDeBZE=",
@@ -95,7 +81,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "naersk": "naersk",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       }
     },
     "rust-analyzer-src": {

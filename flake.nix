@@ -6,7 +6,10 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    naersk.url = "github:nix-community/naersk";
+    naersk = {
+      url = "github:nix-community/naersk";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -25,10 +28,12 @@
 
         naersk' = pkgs.callPackage naersk { };
       in
-      {
+      rec {
         packages.default = naersk'.buildPackage {
           src = ./.;
+          strictDeps = true;
           gitSubmodules = true;
+
           nativeBuildInputs = with pkgs; [
             perl
             protobuf
