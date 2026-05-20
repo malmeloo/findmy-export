@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 use std::io::IsTerminal;
 use std::path::PathBuf;
-use std::str::FromStr;
 use std::sync::Arc;
 
 use async_trait::async_trait;
@@ -220,8 +219,6 @@ fn disable_echo_read() -> String {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    pretty_env_logger::init();
-
     let args: Vec<String> = std::env::args().collect();
 
     let mut apple_id = String::new();

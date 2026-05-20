@@ -825,13 +825,10 @@ name = "export-findmy"
 version = "0.1.0"
 dependencies = [
  "async-trait",
- "cloudkit-proto",
- "icloud_auth",
  "keystore",
  "libc",
  "omnisette",
  "plist",
- "pretty_env_logger",
  "rand 0.8.6",
  "rustpush",
  "sha2",
