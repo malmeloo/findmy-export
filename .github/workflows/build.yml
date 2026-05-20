@@ -26,6 +26,12 @@ jobs:
       - name: Enable Nix cache
         uses: DeterminateSystems/magic-nix-cache-action@v13
 
+      - name: Configure Git for HTTPS
+        run: |
+          git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+          git config --global url."https://".insteadOf git://
+          git config --global advice.detachedHead false
+
       - name: Build
         run: nix build
 
